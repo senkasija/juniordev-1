@@ -28,7 +28,7 @@ function psabiranje(a, b){
 }
 function fsabiranje(a, b){
     c = a + b;
-    return c; //biargumentna funckija, ternarni operator je if petalja u jednoj liniji
+    return c; //biargumentna funkcija, ternarni operator je if petalja u jednoj liniji
   /* zadatak: koristeći select box napraviti jednostavan kalkulatur. u selektu su operatori: tri input polja i jedno Dugmence
     napraviti set varijabli i istražiti sve dostupne operatore javascripta*/
 }
