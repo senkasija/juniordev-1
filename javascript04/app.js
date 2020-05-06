@@ -17,6 +17,20 @@ console.log( typeof boje.options);
         document.getElementById("promeniBoju").disabled = true;
     }
    /* boje.selectedIndex++; 
-    console.log(boje.selectedIndex);*/
+    console.log(boje.selectedIndex);
+    objekakat se kopira po referenci, a varijabla se direktono kopira
+    */
 }
+
+function psabiranje(a, b){
+    c = a + b;
+    console.log(c);
+}
+function fsabiranje(a, b){
+    c = a + b;
+    return c; //biargumentna funckija, ternarni operator je if petalja u jednoj liniji
+  /* zadatak: koristeći select box napraviti jednostavan kalkulatur. u selektu su operatori: tri input polja i jedno Dugmence
+    napraviti set varijabli i istražiti sve dostupne operatore javascripta*/
+}
+     
         
