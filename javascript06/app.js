@@ -2,7 +2,10 @@
 ** najčešće se koristi
 ** bolja za nizove sa utvrđenim indeksom, te for petlju koristimo kada znamo koliko puta petlja treba da se izvrši
 ** preglednija jer su i početna vrednost, uslov i inkrement na jednom mestu
-
+** while koristimo kada ne znamo koliko puta će se ponoviti iteracija, već će se ponavljati dok se ne ispuni uslov
+** for koristimo kada znamo koliko puta treba da se ponovi iteracija
+** for in služi za iteraciju kroz sva svojstva objekta
+** do while izvrđava se bar jedno, while dok god je uslov zadovoljen
 */
 
 var x = "ljutih gusara";
@@ -10,7 +13,7 @@ var y = "Jedan ";
 
 var gusari = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, "nijedan"];
 
-for (i=0; i < gusari.length; ++i){
+for (i=0; i < gusari.length; i++){
 
 
     var kolikoGusara = gusari[i];
@@ -31,17 +34,14 @@ for (i=0; i < gusari.length; ++i){
     ]
     document.write(pesma[i]);
 }
-/*for (var indeks in gusari)  {
-    console.log(indeks + ": " + gusari[indeks]);
-}
-*/
+
 /*var pesmaObjekat = {
     prvaStrofa: `${kolikoGusara} ${x}<br>Došlo u moj krevet<br>${y} pao s kreveta<br>${ostatakGusara}<p>`,
     drugaStrofa: `${kolikoGusara} ${x}<br>Još ne znaju ko sam<br>Jednog sam uspavao<br>${ostatakGusara}<p>`,
     trecaStrofa: `${kolikoGusara} ${x}<br>Ja ih oštro gledam<br>${y}pao u nesvest<br>${ostatakGusara}<p>`
 }*/
-/*for (var indeks1 in pesma)  {
+for (var indeks1 in pesma)  {
     console.log(indeks1 + ": " + pesma[indeks1]);   
-}*/
+}
 
-gusari.forEach(element =>console.log(element));
+/*gusari.forEach(element =>console.log(element));*/

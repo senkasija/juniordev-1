@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #keycode{
+            width: 500px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: aqua;
+            font-weight: bold;
+            color:red;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 50px;
+
+        }
+        </style>
+</head>
+
+
+<body>
+    <div id="keycode"> <!-- u ovom polju se učitava sdržaj klika: naziv tipke i njen kod-->
+            NOT DEFINED
+    </div>
+
+    <script>
+
+        function testKey(dogadaj) { // ovo je callback odnosno event handler funkcija // dogadaj je objekat koji se kreira on the fly
+            console.log("Test Key");
+           
+            var informacija = dogadaj.keyCode + ":" + dogadaj.key; 
+            /*
+              * u varijablu informacija se deponuje vrednost dva svojstva objekta dogadaj
+                ** keyCode - to je brojčani kod tipke IME
+                ** key - to je naziv tipke
+
+            */
+            console.log(informacija);
+
+            if (dogadaj.keyCode == 121){
+                console.log("ovo je tipka F10");
+            } else if(dogadaj.key == "j"){
+                console.log("ovo je tipka j");
+            }
+
+
+            var keycode = document.getElementById("keycode");
+            /* ova varijabla je objekat div-id: keycode*/
+            keycode.innerHTML = informacija;
+            //u objekat keycode upisje se vrednost varijable informacija
+
+        }
+        window.addEventListener("keydown",testKey); 
+        /*
+         * metoda addEventListener priključuje funkciju testKey dokumentu 
+         * ima dva parametra: 
+            ** keydown je ugrađeni event koji se aktivira kada se  pritisne tipka
+            ** drugi je funkcija koja sebe poziva kad se se desi događaj: keydown
+         * 
+
+        */
+        
+    </script>
+</body>
+</html>
