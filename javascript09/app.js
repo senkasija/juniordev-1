@@ -99,7 +99,123 @@ console.log(name1);//output: greška: name1 is not defined - zato što se nalazi
 
 /*---------------------------------------------------------------------*/
 /*-------------------- 1. DOMAĆI ZADATAK: END -------------------------*/
-/*--------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------*/
+/*---------- 2. DOMAĆI ZADATAK: prekrement i decrement -----------------*/
+/*---------------------------------------------------------------------*/
+
+let i = 5;
+console.log(`operand i je: ${i}`);
+let j = i++;
+//i++ označava sufiksno uvećanje operanda i za 1, a znači isto što i = i + 1;
+console.log(`let j = i++ je i dalje: ${j},`);
+console.log(`ali operand i je sada: ${i} jer je uvećan za 1`); 
+//Sufiksno uvećanje (post-increment) i++ uvećava operand i, ali vraća njegovu neuvećanu vrednost
+let x = 5
+console.log(`operand x je: ${x}`);
+let y = ++x;
+console.log(`let y = ++x je: ${y}`);
+console.log(`i operand x je takođe: ${x} jer su uvećani za 1`); 
+//Prefiksno uvećanje (pre-increment) ++x uvećava operand x i vraća njegovu uvećanu vrednost
+
+let z = 5;
+console.log(`operand z je: ${z}`);
+let d = z--;
+//i-- označava sufiksno umanjene operanda i za 1, a znači isto što i = i - 1;
+console.log(`let d = z-- je i dalje: ${d},`);
+console.log(`ali operand z je sada: ${z} jer je umanjen za 1`); 
+//Sufiksno umanjene (post-decrement) i-- umanjuje operand i, ali vraća njegovu neumanjenu vrednost
+let e = 5
+console.log(`operand e je: ${e}`);
+let f = --e;
+console.log(`let f = --e je: ${f}`);
+console.log(`i operand e je takođe: ${e} jer su umanjeni za 1`); 
+//Prefiksno umanjenje (pre-increment) ++x uvećava operand x i vraća njegovu uvećanu vrednost
+
+/*---------------------------------------------------------------------*/
+/*---------- 2. DOMAĆI ZADATAK: prekrement i decrement - END -----------*/
+/*---------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------*/
+/*---------- 3. DOMAĆI ZADATAK: Upitnik sa randomom ---------------------*/
+/*---------------------------------------------------------------------*/
+
+
+document.getElementById("proveri").onclick = function() {
+                
+    var randomNumber = Math.random();
+    console.log (randomNumber);
+    
+    randomNumber = randomNumber * 6;
+    
+    randomNumber = Math.floor(randomNumber);
+   //funkcija Math.floor vraća celi broj koji je jednak broju dobijenim funkcijom Math. random() broju ili manji od njega
+    
+    if (document.getElementById("pogodi").value == randomNumber) {
+        
+        alert("Bravo majstore!");
+        
+    } else {
+        
+        alert("Ništa :( Broj je: " + randomNumber);
+        
+    }
+    
+}
+
+/*---------------------------------------------------------------------*/
+/*---------- 3. DOMAĆI ZADATAK: Upitnik sa randomom - END -------------*/
+/*---------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------*/
+/*---------- 4. DOMAĆI ZADATAK: Promena boje zavisno od temperature  -------------*/
+/*---------------------------------------------------------------------*/
+
+
+function getColor() {
+                
+     letters = '0123456789ABCDEF'.split('');
+  
+    var colorBLue = '#0000';
+    var colorGreen = '#00';
+    var colorRed = '#FF';
+    var temp = "-1";
+
+    if(temp < 0){
+
+        for (var i = 0; i < 2; i++ ) {
+
+            colorBLue += letters[Math.floor(Math.random() * 16)];
+        }
+    }
+    if (temp > 0 && temp < 15){
+        for (var i = 0; i < 4; i++ ) {
+
+            colorGreen += letters[Math.floor(Math.random() * 16)];
+        }
+    }
+    if (temp > 15 && temp < 30){
+        for (var i = 0; i < 4; i++ ) {
+
+            colorRed += letters[Math.floor(Math.random() * 16)];
+        }
+    }
+console.log(colorBLue, colorGreen, colorRed);
+
+}
+getColor();
+
+
+
+/*---------------------------------------------------------------------*/
+/*---------- 4. DOMAĆI ZADATAK: Promena boje zavisno od temperature - END -------------*/
+/*---------------------------------------------------------------------*/
+
+
 
     /*
     *postoji četiri nivoa grešaka:
@@ -107,14 +223,6 @@ console.log(name1);//output: greška: name1 is not defined - zato što se nalazi
     - info message 
     - upozorenje
     - stvarna greška: leksičke, logičke, 
-    */
-  /*
-    razlika između prekrementa i decrementa
-    
-    *  uraditi i upitnik sa randomom
-
-    drugi domaći zadatak: 
-    Promena boje na osnovu temperature. Sve  boje su heksadecimalne.
     */
    /*
    dva načina pisanja varijabla:

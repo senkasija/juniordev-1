@@ -63,7 +63,6 @@ while((i%7) !=0 && i%3!=0 && i>20 && i<30){
 }
 
 
-/*var i = 0;
 console.log("i: "+ i);
 console.log("i++: "+ i++);
 console.log("i: "+ i);

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid black;
+            margin: 10px;
+        }
+        #pradeda {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+        }
+        #deda {
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+        #otac {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+        #stric {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+        #ja {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script>
+        function test(event){
+        console.log(event.srcElement.parentElement);
+        console.log(typeof event.srcElement.parentElement);
+       // event.srcElement.parentElement.innerHTML = "TATA";
+        //event.srcElement.parentElement.innerHTML += "TATA";
+        //pozivom innerHTML  ubijamo svu decu tog  elementa
+        event.srcElement.parentElement.innerHTML + '<div id="brat">BRAT</div>';
+        //sve komšijske elemente javascript zove siblings
+        event.srcElement.parentElement.style.backgroundColor = "yello";
+
+    }
+    </script>
+</head>
+<body>
+    <div id="pradeda">
+        <div id="deda">
+            <div id="stric">
+
+            </div>
+            <div id="otac">
+                <div id="ja" onclick="test(event)">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
