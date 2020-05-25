@@ -29,9 +29,12 @@ function izracunaj(){
             }
             var ocena = 1; 
         }
+        var datum = new Date();
+        var vreme = 
         document.getElementById("bodovi").innerHTML = zbir;
         document.getElementById("ime").innerHTML = ucenik;
         document.getElementById("ocena").innerHTML = ocena;
+        document.getElementById("datum").innerHTML = datum;
 
     }
     izracunajOcenu();
