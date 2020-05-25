@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocene sa pismenog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="ucenik">
+            <label name= "ucenik" for="ucenik"><h4>Ime i prezime učenika</h4></label>
+            <input type="text" id="ucenik">
+        </div>
+
+        <div>
+            <h4>Pravopis</h4>
+            <select id="pravopis">
+                <option disabled selected value="0">-- Da li je bilo grešaka? --</option>
+                <option value="16">16 bodova &#45; Ne</option>
+                <option value="12">12 bodova &#45; Jedna</option>
+                <option value="8">8 bodova &#45; Dve</option>
+                <option value="4">4 bodova &#45; Tri</option>
+                <option value="0">0 bodova &#45; Četiri</option>
+            </select>
+        </div>
+
+        <div>
+            <h4>Gramatika</h4>
+            <select id="gramatika">
+                <option disabled selected value="0">-- Da li je bilo grešaka? --</option>
+                <option value="24">24 bodova &#45; Ne</option>
+                <option value="20">20 bodova &#45; Jedna</option>
+                <option value="16">16 bodova &#45; Dve</option>
+                <option value="12">12 bodova &#45; Tri</option>
+                <option value="8">8 bodova &#45; Četiri</option>
+                <option value="4">4 bodova &#45; Pet</option>
+                <option value="0">0 bodova &#45; Šest</option>
+            </select>
+        </div>
+
+        <div>
+            <h4>Stil</h4>
+            <select id="stil">
+                <option disabled selected value="0">-- Da li je bilo grešaka? --</option>
+                <option value="12">12 bodova &#45; Ne</option>
+                <option value="8">8 bodova &#45; Jedna</option>
+                <option value="4">4 bodova &#45; Dve</option>
+                <option value="0">0 bodova &#45; Tri</option>
+            </select>
+        </div>
+
+        <div>
+            <h4>Kompozicija rada</h4>
+            <select id="kompozicija">
+                <option disabled selected value="0">-- Da li je bilo grešaka? --</option>
+                <option value="8">8 bodova &#45; Ne</option>
+                <option value="4">4 bodova &#45; Jedna</option>
+                <option value="0">0 bodova &#45; Dve</option>
+            </select>
+        </div> 
+
+        <div>
+            <h4>Odgovor na temu</h4>
+            <select id="tema">      
+                <option disabled selected value="0">-- Da li je bilo grešaka? --</option>
+                <option value="28">28 bodova &#45; Ne</option>
+                <option value="21">21 bodova &#45; Jedna</option>
+                <option value="14">14 bodova &#45; Dve</option>
+                <option value="7">7 bodova &#45; Tri</option>
+                <option value="0">0 bodova &#45; Četiri</option>
+            </select>
+        </div>
+
+        <div>
+            <h4>Saberi bodove i izračunaj ocenu</h4>
+            <button type="button" id="calculate">Klikni!</button>
+        </div>
+        
+        <div>
+            <h4>Rezultati testa</h4>
+            <table>
+                <tr>
+                    <th>Učenik</th>
+                    <th>Bodovi</th>
+                    <th>Ocena</th>
+                </tr>
+                <td id="ime">--</td>
+                <td id="bodovi">--</td>
+                <td id="ocena">--</td>
+            </table>
+        </div>
+
+
+    </div>
+    
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
