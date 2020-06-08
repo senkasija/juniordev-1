@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="container">
+        <h1>Kalkulator za ocenu sa grupnog rada</h1>
+        <div id="calculator">
+
+
+            <form>
+                <p>Koju ocena je dobila grupa?
+                <p>
+                    <input id="grupnaOcena" type="text" placeholder="Ocena grupe">
+
+                <p>Koju ocenu iz aktivnosti su zaslužili?
+                <p>
+                    <select id="ocenaAktivnosti">
+                        <option disabled selected value="0">-- Izaberi nivo zalaganja--</option>
+                        <option value="1">100&#37; &#45; Odlično</option>
+                        <option value="0.8">80&#37; &#45; Vrlodobro</option>
+                        <option value="0.7">70&#37; &#45; Dobro</option>
+                        <option value="0.5">50&#37; &#45; Dovoljno</option>
+                        <option value="0">0&#37; &#45; Nedovoljno</option>
+                    </select>
+
+            </form>
+            <p>Koliko učenika je bilo u grupi?</p>
+            <input id="brojUcenika" type="text" placeholder="Broj učenika"> učenici
+            <button type="button" id="calculate">Oceni!</button>
+
+        </div>
+        <!--calculator end-->
+        <div id="totalTip">
+            <sup>Ocena</sup><span id="tip">0.00</span>
+            <small id="each">svakome</small>
+        </div>
+        <!--totalTip end-->
+
+    </div>
+    <!--container end-->
+
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>

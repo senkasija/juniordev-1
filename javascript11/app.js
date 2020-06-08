@@ -9,32 +9,35 @@ function izracunaj(){
     var kompozicija = Number(document.getElementById("kompozicija").value);
     var tema = Number(document.getElementById("tema").value);
     var zbir = pravopis + gramatika + stil + kompozicija + tema;
+    var ukupnoBodova = Number(document.getElementById("ukupno").value);
 
         function izracunajOcenu(){
 
+        var p = (100*zbir)/ukupnoBodova;
+        p = Math.round(p * 100) / 100;
+        p = p.toFixed(0);
+        //console.log(p);
 
-        var ocena = (zbir * 100)/100;
-        if(ocena >= 41 && ocena <= 55){
-            var ocena = 2;
-        } else if (ocena >= 56 && ocena <= 70){
-            var ocena = 3;
-        } else if (ocena >= 71 && ocena <= 85){
-            var ocena = 4;
-        } else if (ocena >= 86 && ocena <= 100){
-            var ocena = 5;
+        if(p >= 41 && p <= 55){
+            var p = 2;
+        } else if (p >= 56 && p <= 70){
+            var p = 3;
+        } else if (p >= 71 && p <= 85){
+            var p = 4;
+        } else if (p >= 86 && p <= 100){
+            var p = 5;
         } else {
-            if(ocena === 0) {
+            if(p === 0) {
                 alert ("Označite prvo rezultate!");
                 return;
             }
             var ocena = 1; 
         }
-        var datum = new Date();
-        var vreme = 
+        var datum = new Date(); 
         document.getElementById("bodovi").innerHTML = zbir;
         document.getElementById("ime").innerHTML = ucenik;
-        document.getElementById("ocena").innerHTML = ocena;
-        document.getElementById("datum").innerHTML = datum;
+        document.getElementById("ocena").innerHTML = p;
+        document.getElementById("datum").innerHTML = datum.toUTCString();
 
     }
     izracunajOcenu();

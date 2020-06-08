@@ -14,7 +14,7 @@ function racunaj() {
         if (operacija == "plus") 
         {
             var ovodaseUpise = x + y;
-            var plus = ovodaseUpise; 
+           // var plus = ovodaseUpise; 
         } 
         else if (operacija == "minus")
         {

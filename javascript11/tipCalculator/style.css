@@ -107,7 +107,7 @@ body {
   }
   
   #totalTip:before {
-    content: "Tip amount";
+    content: "Ocena za učenika";
     font-size: 20px;
     font-weight: bold;
     display: block;

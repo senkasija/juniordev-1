@@ -49,10 +49,13 @@ function elementMetamorphe(text = ''){
     if(width > 0 ) {
         //ako je broj veći od nule, onda se definiše ovaj stil
         style += "width:" + width + "px;"; //PITANJE: zašto je se vrednosti dodaje promenljiva stil???
+        //Stil je objekat!!! Te mu se ne može dodavati string, pa onda treba prvo stil pa tek onda string.
+        //prebaciti stil u novi kod.
     }
 
     if(border_size > 0 ) {
-         style += "border-width:" + border_size + "px;";
+         style += ".border-width:" + border_size + "px;";
+         style.border
     }
 
     if(rounded != '' ) {

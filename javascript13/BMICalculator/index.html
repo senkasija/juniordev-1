@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+
+<body>
+
+    <form name="bmiForm">
+        Vaša težina(kg): <input type="text" name="weight" size="10"><br />
+        Vaša visina(cm): <input type="text" name="height" size="10"><br />
+        <input type="button" value="Izračunaj svoj BMI" onClick="calculateBmi()"><br />
+        Vaš indeks: <input type="text" name="bmi" size="10"><br />
+        Što znači da: <input type="text" name="meaning" size="25"><br />
+        <input type="reset" value="Reset" />
+    </form>
+
+    <script language="JavaScript">
+
+        function calculateBmi() {
+            
+            var tezina = document.bmiForm.weight.value
+            var visina = document.bmiForm.height.value
+            if (tezina > 0 && visina > 0) {
+                var finalBmi = tezina / (visina / 100 * visina / 100)
+                document.bmiForm.bmi.value = finalBmi
+                if (finalBmi < 18.5) {
+                    document.bmiForm.meaning.value = "BMI je prenizak"
+                }
+                if (finalBmi > 18.5 && finalBmi < 25) {
+                    document.bmiForm.meaning.value = "BMI je idealan"
+                }
+                if (finalBmi > 25) {
+                    document.bmiForm.meaning.value = "Vreme je za dijetu i sport"
+                }
+            }
+            else {
+                alert("Molimmo da ispunite sva polja")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
